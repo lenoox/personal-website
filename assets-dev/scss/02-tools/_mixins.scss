@@ -1,0 +1,29 @@
+@mixin small-up {
+    @media (min-width: #{$bp-small}) {
+        @content
+    }
+}
+
+@mixin medium-up {
+    @media (min-width: #{$bp-medium}) {
+        @content
+    }
+}
+
+@mixin large-up {
+    @media (min-width: #{$bp-large}) {
+        @content
+    }
+}
+
+@mixin extra-large-up {
+    @media (min-width: #{$bp-extra-large}) {
+        @content
+    }
+}
+
+@mixin extra-extra-large-up {
+    @media (min-width: #{$bp-extra-extra-large}) {
+        @content
+    }
+}
