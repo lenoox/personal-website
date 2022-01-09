@@ -1,0 +1,11 @@
+.sm-hide {
+  @include small-screen {
+    display: none;
+  }
+}
+
+.md-hide {
+  @include medium-up {
+    display: none;
+  }
+}

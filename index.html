@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <link rel="stylesheet" type="text/css" href="assets-dev/scss/07-templates/_site-header.scss"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AG Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/style.scss">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+<header class="t-site-header">
+    <div class="t-site-header__grid">
+    </div>
+    <div class="t-site-header__content">
+        <div class="o-container">
+            <div class="t-site-header__top">
+                <div class="o-col o-col--sm25">
 
+                </div>
+                <div class="o-col o-col--sm75">
+                    <div class="t-site-header__menu">
+                        <ul class="c-nav">
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Start</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">O mnie</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Usługi</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Technologie</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Portfolio</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Kontakt</a>
+                            </li>
+                        </ul>
+                        <div class="t-site-header__hamburger">
+                            <span class="t-site-header__hamburger-bar"></span>
+                            <span class="t-site-header__hamburger-bar"></span>
+                            <span class="t-site-header__hamburger-bar"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="t-site-header__hero">
+                <div class="o-row o-row--center-y o-row--column-reverse">
+                    <div class="o-col o-col--lg50">
+                        <h1 class="c-heading c-heading--level0 c-heading--primary">Adam Górecki</h1>
+                        <p class="t-site-header__position-text">Developer</p>
+                        <div class="t-site-header__quote">
+                            <p class="t-site-header__quote--text">“In order to be knowledgeable in these changing times,
+                                we must pursue a&nbsp;constant program of self-improvement, a&nbsp;never-ending journey
+                                into new fields of knowledge and learning.” </p>
+                            <span class="t-site-header__quote--author u-text-right">~ Og Mandino</span>
+                        </div>
+                        <a class="c-btn c-btn--light sm-hide" href="#">Zobacz więcej</a>
+                    </div>
+                    <div class="o-col o-col--lg50">
+                        <div class="t-site-header__avatar u-text-center"></div>
+                    </div>
+
+                </div>
+                <div class="t-site-header__scroll">
+                    <span class="t-site-header__arrow t-site-header__arrow--first"></span>
+                    <span class="t-site-header__arrow t-site-header__arrow--second"></span>
+                    <span class="t-site-header__arrow t-site-header__arrow--third"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -1,29 +1,35 @@
 @mixin small-up {
-    @media (min-width: #{$bp-small}) {
-        @content
-    }
+  @media (min-width: #{$bp-small}) {
+    @content
+  }
 }
 
 @mixin medium-up {
-    @media (min-width: #{$bp-medium}) {
-        @content
-    }
+  @media (min-width: #{$bp-medium}) {
+    @content
+  }
 }
 
 @mixin large-up {
-    @media (min-width: #{$bp-large}) {
-        @content
-    }
+  @media (min-width: #{$bp-large}) {
+    @content
+  }
 }
 
 @mixin extra-large-up {
-    @media (min-width: #{$bp-extra-large}) {
-        @content
-    }
+  @media (min-width: #{$bp-extra-large}) {
+    @content
+  }
 }
 
 @mixin extra-extra-large-up {
-    @media (min-width: #{$bp-extra-extra-large}) {
-        @content
-    }
+  @media (min-width: #{$bp-extra-extra-large}) {
+    @content
+  }
+}
+
+@mixin small-screen {
+  @media only screen and (max-width: #{$bp-large}) {
+    @content
+  }
 }

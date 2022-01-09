@@ -66,6 +66,13 @@
     }
   }
 
+  &--lg75 {
+    @include large-up {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+
   &--xl25 {
     @include extra-large-up {
       flex: 0 0 25%;
@@ -74,14 +81,14 @@
   }
 
   &--xl33 {
-    @include extra-large-up  {
+    @include extra-large-up {
       flex: 0 0 33.3333%;
       max-width: 33.3333%;
     }
   }
 
   &--xl50 {
-    @include extra-large-up  {
+    @include extra-large-up {
       flex: 0 0 50%;
       max-width: 50%;
     }

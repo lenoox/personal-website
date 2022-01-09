@@ -1,0 +1,70 @@
+.c-nav {
+  &__item {
+    color: $white;
+    display: block;
+    font-size: $font-size-5;
+    padding-bottom: $grid-base * .75;
+    padding-top: $grid-base * .75;
+    text-align: center;
+    width: 100%;
+
+    & a {
+      color: $white;
+      @include small-screen {
+        color: $secondary;
+      }
+    }
+
+    &:hover {
+      color: $primary;
+      @include small-screen {
+        background-color: $secondary;
+        color: $primary;
+      }
+
+      & a {
+        color: $primary;
+        @include small-screen {
+          color: $primary;
+        }
+      }
+    }
+
+    @include large-up {
+      display: inline-block;
+      margin-left: $grid-base * 2.5;
+      width: auto;
+    }
+    @include small-screen {
+      background-color: $primary;
+      padding: $grid-base * 0.75;
+      margin: 10px auto;
+      width: 80%;
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+  }
+
+
+  @include small-screen {
+    & {
+      z-index: 999;
+      padding: $grid-base *5 $grid-base;
+      position: fixed;
+      left: -100%;
+      top: 50px;
+      flex-direction: column;
+      background-color: #285AEA;
+      width: 100%;
+      text-align: center;
+      margin: 0px auto;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    &.active {
+      left: 0;
+    }
+  }
+}

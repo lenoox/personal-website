@@ -1,0 +1,317 @@
+.t-site-header {
+  background: #2451C7;
+  width: 100%;
+  height: 90vh;
+
+  &__content {
+    position: absolute;
+    height: 70vh;
+    top: 0px
+  }
+
+  &__grid {
+    opacity: 0.30;
+    height: 90vh;
+    background: linear-gradient(45deg, transparent 74px, transparent 75px, #0000BC 75px, #0000BC 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #0000BC 76px, #0000BC 77px, transparent 78px, transparent 109px);
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  }
+
+  &__top {
+    padding-bottom: $grid-base * 1.5;
+    padding-top: $grid-base * 1.5;
+    position: relative
+  }
+
+  &__menu {
+    margin-top: $grid-base * 2;
+
+    @include large-up {
+      text-align: right;
+      margin-top: 0;
+    }
+  }
+
+  &__hero {
+    height: 90vh;
+    position: relative;
+    @include small-screen {
+      text-align: center;
+      padding-bottom: $grid-base * 2;
+      padding-top: $grid-base * 2;
+    }
+    @include medium-up {
+      text-align: center;
+      padding-bottom: $grid-base * 3;
+      padding-top: $grid-base * 3;
+    }
+    @include large-up {
+      text-align: left;
+      padding-bottom: $grid-base * 3;
+      padding-top: $grid-base * 3;
+    }
+    @include extra-large-up {
+      text-align: left;
+      padding-bottom: $grid-base * 4;
+      padding-top: $grid-base * 4;
+    }
+    @include extra-extra-large-up {
+      text-align: left;
+      padding-bottom: $grid-base * 7;
+      padding-top: $grid-base * 7;
+    }
+  }
+
+  &__position-text {
+    color: $white;
+
+    @include small-screen {
+      font-size: $font-size-3;
+    }
+    @include medium-up {
+      font-size: $font-size-2;
+    }
+    @include large-up {
+      font-size: $font-size-1;
+    }
+  }
+
+  &__quote {
+    margin-bottom: $grid-base * 1;
+    margin-top: $grid-base * 1;
+    color: #e2e2e2;
+
+    &--text {
+      text-align: justify;
+      @include small-screen {
+        font-size: $font-size-5;
+      }
+      @include medium-up {
+        font-size: $font-size-5;
+      }
+      @include large-up {
+        font-size: $font-size-4;
+      }
+    }
+
+    &--author {
+      display: block;
+      margin-bottom: $grid-base * 0.75;
+      margin-top: $grid-base * 0.75;
+      @include small-screen {
+        font-size: $font-size-6;
+      }
+      @include medium-up {
+        font-size: $font-size-5;
+      }
+      @include large-up {
+        font-size: $font-size-4;
+      }
+    }
+  }
+
+
+  &__avatar {
+    background-image: url("../images/ag.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    background-size: cover;
+    margin-bottom: $grid-base;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    @include small-screen {
+      width: 26vh;
+      height: 26vh;
+    }
+    @include medium-up {
+      width: 28vh;
+      height: 28vh;
+    }
+    @include large-up {
+      width: 32vh;
+      height: 32vh;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 10px;
+
+    @include small-screen {
+      & {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: $white;
+    @include small-screen {
+      .c-nav__hamburger.active &:nth-child(2) {
+        opacity: 0;
+      }
+
+      .c-nav__hamburger.active &:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .c-nav__hamburger.active &:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  &__scroll {
+    display: block;
+    margin: 0 auto;
+    width: 24px;
+    height: 100px;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 8vh;
+  }
+
+  &__arrow {
+    display: block;
+    width: 5px;
+    height: 5px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    margin: 0 0 3px 4px;
+    width: 16px;
+    height: 16px;
+
+    &--first {
+      margin-top: 1px;
+    }
+
+    &--first, &--second, &--third {
+      -webkit-animation: mouse-scroll 1s infinite;
+      -moz-animation: mouse-scroll 1s infinite;
+      animation: mouse-scroll 1s infinite;
+
+    }
+
+    &--first {
+      -webkit-animation-delay: .1s;
+      -moz-animation-delay: .1s;
+      -webkit-animation-direction: alternate;
+
+      animation-direction: alternate;
+      animation-delay: alternate;
+    }
+
+    &--second {
+      -webkit-animation-delay: .2s;
+      -moz-animation-delay: .2s;
+      -webkit-animation-direction: alternate;
+      animation-delay: .2s;
+      animation-direction: alternate;
+      margin-top: -6px;
+    }
+
+    &--third {
+      -webkit-animation-delay: .3s;
+      -moz-animation-delay: .3s;
+      -webkit-animation-direction: alternate;
+      animation-delay: .3s;
+      animation-direction: alternate;
+      margin-top: -6px;
+    }
+  }
+
+  @-webkit-keyframes mouse-scroll {
+
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes mouse-scroll {
+
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-o-keyframes mouse-scroll {
+
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes mouse-scroll {
+
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @include small-screen {
+    clip-path: polygon(
+                    0 0,
+                    100% 0%,
+                    100% 90%,
+                    50% 100%,
+                    0 90%
+    );
+  }
+  @include medium-up {
+    clip-path: polygon(
+                    0 0,
+                    100% 0%,
+                    100% 85%,
+                    50% 100%,
+                    0 85%
+    );
+  }
+  @include large-up {
+    clip-path: polygon(
+                    0 0,
+                    100% 0%,
+                    100% 78%,
+                    50% 100%,
+                    0 78%
+    );
+  }
+}
+

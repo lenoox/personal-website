@@ -1,0 +1,53 @@
+.c-heading {
+  color: $white;
+
+  &--level0 {
+    font-size: $font-size-0;
+
+    @include small-screen {
+      font-size: $font-size-2;
+    }
+    @include medium-up {
+      font-size: $font-size-1;
+    }
+    @include large-up {
+      font-size: $font-size-0;
+    }
+  }
+
+  &--level1 {
+    font-size: $font-size-1;
+
+    @include small-screen {
+      font-size: $font-size-3;
+    }
+    @include medium-up {
+      font-size: $font-size-2;
+    }
+    @include large-up {
+      font-size: $font-size-1;
+    }
+  }
+
+  &--level2 {
+    font-size: $font-size-2;
+
+    @include small-screen {
+      font-size: $font-size-4;
+    }
+    @include medium-up {
+      font-size: $font-size-3;
+    }
+    @include large-up {
+      font-size: $font-size-2;
+    }
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--primary {
+    color: $primary;
+  }
+}

@@ -1,0 +1,27 @@
+.c-btn {
+  border: none;
+  border-radius: $border-radius;
+  display: inline-block;
+  font-size: $font-size-5;
+  font-weight: 500;
+  line-height: $line-height-base;
+  padding: .60rem 0;
+  text-align: center;
+
+  transition: all .25s ease-in-out;
+  width: $grid-base * 20;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--light {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+      background-color: darken($white, 15%);
+      color: $black;
+    }
+  }
+}

@@ -12,4 +12,10 @@
   &--center-y {
     align-items: center;
   }
+
+  &--column-reverse {
+    @include small-screen {
+      flex-direction: column-reverse;
+    }
+  }
 }
