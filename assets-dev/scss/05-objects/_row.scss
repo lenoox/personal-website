@@ -1,16 +1,26 @@
 .o-row {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   margin-left: -$gutter;
   margin-right: -$gutter;
 
-  @include medium-up {
-    flex-direction: row;
-  }
-
   &--center-y {
     align-items: center;
+  }
+
+  &--column {
+    flex-direction: column;
+
+  }
+
+  &--no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  &--column-rwd {
+    @include medium-up {
+      flex-direction: row;
+    }
   }
 
   &--column-reverse {
