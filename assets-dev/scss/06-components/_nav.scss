@@ -2,7 +2,7 @@
   &__item {
     color: $white;
     display: block;
-    font-size: $font-size-5;
+    font-size: $font-size-6;
     padding-bottom: $grid-base * .75;
     padding-top: $grid-base * .75;
     text-align: center;
@@ -11,14 +11,13 @@
     & a {
       color: $white;
       @include small-screen {
-        color: $secondary;
+        color: $white;
       }
     }
 
     &:hover {
       color: $primary;
       @include small-screen {
-        background-color: $secondary;
         color: $primary;
       }
 
@@ -26,6 +25,7 @@
         color: $primary;
         @include small-screen {
           color: $primary;
+          font-weight: bold;
         }
       }
     }
@@ -36,26 +36,22 @@
       width: auto;
     }
     @include small-screen {
-      background-color: $primary;
       padding: $grid-base * 0.75;
       margin: 10px auto;
       width: 80%;
-      &:hover {
-        background-color: $secondary;
-      }
     }
   }
 
 
   @include small-screen {
     & {
-      z-index: 999;
+      z-index: 499;
       padding: $grid-base *5 $grid-base;
       position: fixed;
-      left: -100%;
-      top: 50px;
+      top: -100%;
+      left: 0;
       flex-direction: column;
-      background-color: #285AEA;
+      background-color: rgba(36, 81, 199, 0.95);
       width: 100%;
       text-align: center;
       margin: 0px auto;
@@ -64,7 +60,7 @@
     }
 
     &.active {
-      left: 0;
+      top: 0;
     }
   }
 }

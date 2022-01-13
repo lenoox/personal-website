@@ -1,0 +1,73 @@
+.t-service {
+  background: $secondary;
+  padding-top: $grid-base * 4;
+  padding-bottom: $grid-base * 4;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include small-up {
+      width: 100%;
+      flex-direction: row;
+    }
+    @include medium-up {
+      width: 80%;
+    }
+    @include large-up {
+      width: 70%;
+    }
+    @include extra-large-up {
+      width: 65%;
+    }
+    @include extra-extra-large-up {
+      width: 50%;
+    }
+  }
+
+  &__element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include medium-up {
+      width: 220px;
+    }
+    @include large-up {
+      width: 280px;
+    }
+  }
+
+  &__shape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $primary;
+    width: 88px;
+    height: 88px;
+    border-radius: 44px;
+    margin: $grid-base;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+
+  }
+
+  &__icon-web {
+    width: 54px;
+    height: 54px;
+  }
+
+  &__name {
+    color: white;
+    margin: $grid-base;
+    font-size: $font-size-6;
+  }
+}
