@@ -30,12 +30,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    @include medium-up {
-      width: 220px;
-    }
-    @include large-up {
-      width: 280px;
-    }
+    width: 280px;
+
   }
 
   &__shape {
