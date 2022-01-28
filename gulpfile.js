@@ -1,25 +1,24 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
-const minify = require('gulp-minify');
-
-gulp.task('sass', function() {
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+gulp.task('sass', function () {
     return gulp.src("assets-dev/scss/**/*.scss")
         .pipe(sass())
         .pipe(gulp.dest("assets/css"))
         .pipe(browserSync.stream());
 });
-gulp.task('min-js', function() {
+gulp.task('min-js', function () {
     return gulp.src('assets-dev/js/**/*.js')
-        .pipe(minify({
-            ext: {
-                min: '.min.js'
-            },
-            ignoreFiles: ['-min.js']
-        }))
+        .pipe(concat('script.js'))
+        .pipe(gulp.dest('assets/js'))
+        .pipe(rename('script.min.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('assets/js'))
 });
-gulp.task('serve', gulp.series('sass','min-js', function() {
+gulp.task('serve', gulp.series('sass', 'min-js', function () {
     browserSync.init({
         server: "./"
     });
