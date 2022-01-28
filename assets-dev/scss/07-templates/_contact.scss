@@ -1,0 +1,83 @@
+.t-contact {
+  padding-top: $grid-base * 3;
+  padding-bottom: $grid-base * 6;
+  background-color: $secondary;
+  color: $white;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    padding-top: $grid-base * 2;
+    @include small-up {
+      width: 100%;
+      flex-direction: row;
+    }
+    @include medium-up {
+      width: 80%;
+      flex-direction: row;
+    }
+    @include large-up {
+      width: 70%;
+    }
+    @include extra-large-up {
+      width: 65%;
+    }
+    @include extra-extra-large-up {
+      width: 50%;
+    }
+  }
+
+  &__element {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    p {
+      margin-left: $grid-base * 1.4;
+    }
+  }
+
+  &__icon-web {
+    border: 2px solid $white;
+
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &--linkedin {
+      width: 30px;
+      height: 30px;
+    }
+
+    &--github {
+      width: 38px;
+      height: 36px;
+    }
+  }
+
+  &__link {
+    color: white;
+    font-weight: bold;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:focus {
+      color: darken($primary, 15%);
+    }
+
+    &:active {
+      color: darken($primary, 30%);
+    }
+
+    &:visited {
+      text-decoration: underline;
+      color: #d9d9d9;
+    }
+  }
+}

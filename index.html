@@ -171,6 +171,79 @@
         </div>
     </div>
 </section>
-<script src="./assets/js/script.js"></script>
+<section id="portfolio" class="t-portfolio">
+    <div class="o-container">
+        <div class="o-row o-row--center-x">
+            <h2 class="c-heading c-heading--level2 c-heading--secondary">Portfolio</h2>
+        </div>
+        <div class="o-row o-row--center-x">
+            <div id="portfolioSelect" class="t-portfolio__select">
+                <button class="c-btn c-btn__inverse c-btn__inverse--active filterSelection" select="all">Wszystkie
+                </button>
+                <button class="c-btn c-btn__inverse filterSelection" select="personal">Własne</button>
+                <button class="c-btn c-btn__inverse filterSelection" select="client">Klient</button>
+            </div>
+        </div>
+        <div class="o-row o-row--center-x o-row--column-rwd">
+            <div class="o-col o-col--lg50 t-portfolio__gallery-conteiner personal">
+                <div class="t-portfolio__element">
+                    <img src="./assets/images/ProMusic.jpg"
+                         class="t-portfolio__image"
+                         alt="Zdjęcie mojego projektu sklepu internetowego stworzonego w oparciu o technologie Angular i Spring.">
+                    <div class="t-portfolio__description">
+                        <h3 class="c-heading c-heading--level3 c-heading--primary">Portfolio</h3>
+                        <p class="u-white u-text-center">TypeScript, Angular, Bootstrap, Java, Spring, PostgreSQL,
+                            FlywayDB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="o-col o-col--lg50 t-portfolio__gallery-conteiner client">
+                <div class="t-portfolio__element">
+                    <img src="./assets/images/MFilm.jpg"
+                         class="t-portfolio__image"
+                         alt="Zdjęcie stworzonej strony internetowej dla klienta z branży filmowej.">
+                    <div class="t-portfolio__description">
+                        <h3 class="c-heading c-heading--level3 c-heading--primary">MFILM</h3>
+                        <p class="u-white u-text-center">HTML, CSS, JavaScript, framework PHP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="t-contact">
+    <div class="o-container">
+        <div class="o-row o-row--center-x">
+            <h2 class="c-heading c-heading--level2 u-text-center">Skontaktuj się ze mną</h2>
+        </div>
+        <div class="o-row o-row--center-x">
+            <div class="t-contact__content">
+                <div class="t-contact__element o-col">
+                    <div class="t-contact__icon-web">
+                        <span class="iconify t-contact__icon-web--linkedin" data-icon="fontisto:linkedin"></span>
+                    </div>
+                    <p class="t-contact__alias">
+                        <a href="https://www.linkedin.com/in/adamgorecki128/" class="t-contact__link" target="_blank"
+                           rel="noopener noreferrer" alt="Link do profilu na portalu LinkedIn">@adamgorecki128</a>
+                    </p>
+                </div>
+                <div class="t-contact__element o-col">
+                    <div class="t-contact__icon-web">
+                        <span class="iconify t-contact__icon-web--github" data-icon="iconoir:github"></span>
+                    </div>
+                    <p class="t-contact__alias">
+                        <a href="https://github.com/lenoox" class="t-contact__link" target="_blank"
+                           rel="noopener noreferrer" alt="Link do profilu na portalu github">@lenoox</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="t-site-footer">
+    <div class="u-text-center">Copyright 2021 © Adam Górecki</div>
+</footer>
+
+<script src="./assets/js/script.min.js"></script>
 </body>
 </html>
