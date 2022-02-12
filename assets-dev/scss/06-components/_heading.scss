@@ -1,13 +1,11 @@
 .c-heading {
-  color: $white;
+  color: color(text-white);
   line-height: $line-height-sm;
-  margin-bottom: $grid-base*1.2;
   @include small-screen {
     text-align: center;
   }
 
   &--level1 {
-    font-size: $font-size-1;
     @include small-screen {
       font-size: $font-size-2;
     }
@@ -17,10 +15,15 @@
     @include large-up {
       font-size: $font-size-1;
     }
+    @include extra-large-up {
+      font-size: $font-size-1;
+    }
+    @include extra-extra-large-up {
+      font-size: $font-size-1;
+    }
   }
 
   &--level2 {
-    font-size: $font-size-2;
     @include small-screen {
       font-size: $font-size-3;
     }
@@ -30,11 +33,15 @@
     @include large-up {
       font-size: $font-size-2;
     }
+    @include extra-large-up {
+      font-size: $font-size-2;
+    }
+    @include extra-extra-large-up {
+      font-size: $font-size-2;
+    }
   }
 
   &--level3 {
-    font-size: $font-size-3;
-
     @include small-screen {
       font-size: $font-size-4;
     }
@@ -44,6 +51,12 @@
     @include large-up {
       font-size: $font-size-3;
     }
+    @include extra-large-up {
+      font-size: $font-size-3;
+    }
+    @include extra-extra-large-up {
+      font-size: $font-size-3;
+    }
   }
 
   &--upper {
@@ -51,10 +64,10 @@
   }
 
   &--primary {
-    color: $primary;
+    color: color(text-color-primary);
   }
 
   &--secondary {
-    color: $secondary;
+    color: color(text-color);
   }
 }

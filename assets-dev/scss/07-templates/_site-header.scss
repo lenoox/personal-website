@@ -1,41 +1,27 @@
 .t-site-header {
-  background: #2451C7;
+  background: color(bg-header);
   width: 100%;
   height: 90vh;
 
   &__content {
     position: absolute;
     height: 80vh;
-    top: 0px
+    width: 100%;
+    top: 50px;
   }
 
   &__container {
     position: relative;
-    height: 80vh;
+    height: 86vh;
   }
 
   &__grid {
     opacity: 0.30;
     height: 90vh;
-    background: linear-gradient(45deg, transparent 74px, transparent 75px, #0000BC 75px, #0000BC 76px, transparent 77px, transparent 109px),
-    linear-gradient(-45deg, transparent 75px, transparent 76px, #0000BC 76px, #0000BC 77px, transparent 78px, transparent 109px);
+    background: linear-gradient(45deg, transparent 74px, transparent 75px, color(grid) 75px, color(grid) 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, color(grid) 76px, color(grid) 77px, transparent 78px, transparent 109px);
     background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  }
-
-  &__top {
-    padding-bottom: $grid-base * 1.5;
-    padding-top: $grid-base * 1.5;
-    position: relative
-  }
-
-  &__menu {
-    margin-top: $grid-base * 2;
-
-    @include large-up {
-      text-align: right;
-      margin-top: 0;
-    }
   }
 
   &__hero {
@@ -48,6 +34,7 @@
   &__position-text {
     color: $white;
     line-height: $line-height-sm;
+    margin-top: $grid-base;
     margin-bottom: $grid-base*2;
     @include small-screen {
       font-size: $font-size-3;
@@ -62,8 +49,7 @@
   }
 
   &__quote {
-    margin-top: $grid-base * 3;
-    margin-bottom: $grid-base * 1;
+    @include padding-before-content();
     color: #e2e2e2;
 
     &--text {
@@ -96,7 +82,6 @@
     }
   }
 
-
   &__avatar {
     background-image: url("../images/ag.jpg");
     background-repeat: no-repeat;
@@ -120,43 +105,6 @@
     }
   }
 
-  &__hamburger {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 10px;
-    z-index: 999;
-    @include small-screen {
-      & {
-        display: block;
-        cursor: pointer;
-      }
-    }
-  }
-
-  &__hamburger-bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: $white;
-    @include small-screen {
-      .c-nav__hamburger.active &:nth-child(2) {
-        opacity: 0;
-      }
-
-      .c-nav__hamburger.active &:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-
-      .c-nav__hamburger.active &:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-    }
-  }
-
   &__scroll {
     display: block;
     margin: 0 auto;
@@ -173,8 +121,8 @@
     display: block;
     width: 5px;
     height: 5px;
-    -ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     border-right: 2px solid white;
     border-bottom: 2px solid white;
@@ -187,9 +135,9 @@
     }
 
     &--first, &--second, &--third {
-      -webkit-animation: mouse-scroll 1s infinite;
-      -moz-animation: mouse-scroll 1s infinite;
-      animation: mouse-scroll 1s infinite;
+      -webkit-animation: mouse-scroll $transition-slow infinite;
+      -moz-animation: mouse-scroll $transition-slow infinite;
+      animation: mouse-scroll $transition-slow infinite;
     }
 
     &--first {
@@ -220,7 +168,6 @@
   }
 
   @-webkit-keyframes mouse-scroll {
-
     0% {
       opacity: 0;
     }
@@ -232,7 +179,6 @@
     }
   }
   @-moz-keyframes mouse-scroll {
-
     0% {
       opacity: 0;
     }
@@ -244,7 +190,6 @@
     }
   }
   @-o-keyframes mouse-scroll {
-
     0% {
       opacity: 0;
     }
@@ -256,7 +201,6 @@
     }
   }
   @keyframes mouse-scroll {
-
     0% {
       opacity: 0;
     }

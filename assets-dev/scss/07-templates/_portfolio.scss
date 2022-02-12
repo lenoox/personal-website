@@ -1,10 +1,10 @@
 .t-portfolio {
-  padding-top: $grid-base * 5;
-  padding-bottom: $grid-base * 6;
+  background-color: color(bg-section-light);
+  min-height: 600px;
+  @include padding-section();
 
   &__select {
-    padding-top: $grid-base*2;
-    padding-bottom: $grid-base*3;
+    @include padding-before-content();
     @include small-screen {
       display: flex;
       flex-direction: column;
@@ -13,16 +13,27 @@
     }
   }
 
+  &__content {
+    margin-top: $grid-base*4;
+  }
+
   &__gallery-conteiner {
     @include small-screen {
-      margin-top: $grid-base * 1.6;
+      margin-top: $grid-base;
+      margin-bottom: $grid-base;
     }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
   }
 
   &__element {
     width: 100%;
     height: 100%;
     position: relative;
+
     &:hover {
       .t-portfolio__description {
         opacity: 1;
@@ -30,18 +41,18 @@
     }
   }
 
-  .t-portfolio__description {
+  &__description {
     position: absolute;
-    z-index: 1000;
+    z-index: $z-index3;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(36, 81, 199, 0.7);
+    background-color: color(bg-gallery-opacity);
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: .5s ease;
+    transition: $transition-normal ease;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -50,45 +61,49 @@
 
     h3 {
       position: relative;
+
       &:after {
         content: '';
         position: absolute;
         height: 2px;
-        bottom: -18px;
         margin: 0 auto;
         left: -10%;
         right: 0;
         width: 120%;
         background: white;
-        @include small-screen {
-          bottom: -8px;
+        @include extra-small-up {
+          bottom: -10px;
+        }
+        @include small-up {
+          padding-top: -10px;
         }
         @include medium-up {
-          bottom: -10px;
+          padding-top: -8px;
+        }
+        @include large-up {
+          padding-top: -8px;
         }
       }
     }
 
     p {
-      padding-top: 20px;
-      width: 50%;
       font-size: $font-size-6;
-      line-height: 130%;
-      @include small-screen {
-        padding-top: 5px;
-        width: 80%;
-        line-height: 110%;
+
+      @include extra-small-up {
+        line-height: 114%;
+        padding-top: 20px;
+      }
+      @include small-up {
+        padding-top: 20px;
+        width: 70%;
       }
       @include medium-up {
-        padding-top: 7px;
-        width: 70%;
+        padding-top: 18px;
+      }
+      @include large-up {
         line-height: 120%;
+        padding-top: 18px;
       }
     }
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
   }
 }

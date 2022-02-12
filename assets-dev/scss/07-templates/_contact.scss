@@ -1,13 +1,11 @@
 .t-contact {
-  padding-top: $grid-base * 3;
-  padding-bottom: $grid-base * 6;
-  background-color: $secondary;
-  color: $white;
+  background: color(bg-section-color);
+  @include padding-section();
 
   &__content {
     display: flex;
     justify-content: center;
-    padding-top: $grid-base * 2;
+    @include padding-before-content();
     @include small-up {
       width: 100%;
       flex-direction: row;
@@ -32,14 +30,14 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
+
     p {
       margin-left: $grid-base * 1.4;
     }
   }
 
-  &__icon-web {
+  &__icon {
     border: 2px solid $white;
-
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -60,7 +58,7 @@
   }
 
   &__link {
-    color: white;
+    color: $white;
     font-weight: bold;
 
     &:hover {
@@ -77,7 +75,7 @@
 
     &:visited {
       text-decoration: underline;
-      color: #d9d9d9;
+      color: $white;
     }
   }
 }

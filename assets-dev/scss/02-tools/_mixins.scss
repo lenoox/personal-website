@@ -1,3 +1,30 @@
+@mixin accessibility-links-and-buttons {
+  &:focus-visible {
+    outline: 3px #D90C0C dashed;
+  }
+}
+
+@mixin padding-section {
+  padding-top: $grid-base * 5;
+  padding-bottom: $grid-base * 5;
+}
+
+@mixin padding-before-content {
+  margin-top: $grid-base*3;
+}
+
+@mixin small-screen {
+  @media only screen and (max-width: #{$bp-large}) {
+    @content
+  }
+}
+
+@mixin extra-small-up {
+  @media (min-width: 0) {
+    @content
+  }
+}
+
 @mixin small-up {
   @media (min-width: #{$bp-small}) {
     @content
@@ -24,12 +51,6 @@
 
 @mixin extra-extra-large-up {
   @media (min-width: #{$bp-extra-extra-large}) {
-    @content
-  }
-}
-
-@mixin small-screen {
-  @media only screen and (max-width: #{$bp-large}) {
     @content
   }
 }

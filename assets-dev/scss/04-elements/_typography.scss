@@ -1,5 +1,7 @@
 a {
-  text-decoration: none;
+  cursor: pointer;
+  padding: $link-padding;
+  @include accessibility-links-and-buttons;
 }
 
 p {

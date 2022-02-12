@@ -7,9 +7,10 @@
   line-height: $line-height-base*0.9;
   padding: .60rem 0;
   text-align: center;
-
-  transition: all .25s ease-in-out;
+  transition: all $transition-fast ease-in-out;
   width: $grid-base * 20;
+  cursor: pointer;
+  @include accessibility-links-and-buttons;
 
   &:hover {
     text-decoration: none;
@@ -18,10 +19,34 @@
   &--light {
     background-color: $white;
     color: $black;
+    border: 2px solid color(btn-white-border);
 
     &:hover {
       background-color: darken($white, 15%);
       color: $black;
+    }
+  }
+
+  &__inverse {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: color(btn-inverse);
+    border: 1px solid color(btn-inverse);
+    padding: .3rem 0;
+    line-height: $line-height-base*0.8;
+    width: $grid-base * 14;
+    font-size: $font-size-6;
+    margin-left: $grid-base*1.5;
+    margin-right: $grid-base*1.5;
+    @include small-screen {
+      width: $grid-base * 17;
+      line-height: $line-height-base*0.8;
+      font-size: $font-size-7;
+      margin-top: $grid-base;
+    }
+
+    &--active {
+      background-color: color(btn-inverse);
+      color: color(btn-text-white);
     }
   }
 }

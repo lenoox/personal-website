@@ -1,10 +1,9 @@
 .t-technology {
-  background-color: $gray-light;
-  padding-top: $grid-base * 5;
-  padding-bottom: $grid-base * 6;
+  background-color: color(bg-section-dark);
+  @include padding-section();
 
   &__content {
-    margin-top: $grid-base*2;
+    @include padding-before-content();
   }
 
   &__element {
@@ -12,14 +11,14 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: $secondary;
-    margin-bottom: $grid-base * 1.6;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-    width: 30vh;
-    height: 180px;
+    background: color(bg-card);
+    box-shadow: $box-shadow-normal;
+    padding: 34px 130px;
+    margin-bottom: $grid-base;
+    margin-top: $grid-base;
 
     &:hover {
-      background-color: darken($secondary, 5%);
+      background: color(bg-card-active);
     }
   }
 
@@ -33,22 +32,15 @@
     align-items: center;
     justify-content: center;
 
-    &-img {
-      width: 88px;
-      height: 88px;
-      border-radius: 20px;
-      background-color: $white;
-    }
-
-    &-java {
+    &--java {
       width: 56px;
       height: 68px;
     }
   }
 
   &__name {
-    color: white;
-    margin: $grid-base;
+    color: $white;
+    margin-top: $grid-base;
     font-size: $font-size-6;
   }
 }

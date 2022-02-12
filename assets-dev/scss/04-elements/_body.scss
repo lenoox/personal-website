@@ -2,3 +2,53 @@ html {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
 }
+
+body {
+  background: color(bg-section-light);
+}
+
+body[light-mode="light"] {
+  --color-bg-navbar: #{$secondary};
+  --color-bg-header: #{$secondary};
+  --color-bg-section-color: #{$secondary};
+  --color-bg-section-light: #{$white};
+  --color-bg-section-dark: #{$gray-light-mode};
+  --color-bg-card: #{$secondary};
+  --color-bg-card-active: #{$card-active-light-mode};
+  --color-bg-gallery-opacity: #{$gallery-hover-light-mode-with-opacity};
+  --color-bg-icon-color: #{$primary};
+  --color-text-white: #{$white};
+  --color-text-light: #{$text-dark-mode-1};
+  --color-text-dark: #{$text-light-mode-1};
+  --color-text-color: #{$secondary};
+  --color-text-color-primary: #{$primary};
+  --color-grid: #{$grid-light-mode};
+  --color-btn-inverse: #{$secondary};
+  --color-btn-text-white: #{$white};
+  --color-btn-white-border: #{$secondary};
+  --color-icon: #{$secondary};
+  --color-mobile-menu: #{$mobile-menu-light-mode-with-opacity};
+}
+
+body[light-mode="dark"] {
+  --color-bg-navbar: #{$gray-dark-mode-1};
+  --color-bg-header: #{$gray-dark-mode-1};
+  --color-bg-section-color: #{$gray-dark-mode-1};
+  --color-bg-section-light: #{$gray-dark-mode-3};
+  --color-bg-section-dark: #{$gray-dark-mode-2};
+  --color-bg-card: #{$gray-dark-mode-1};
+  --color-bg-card-active: #{$card-active-dark-mode};
+  --color-bg-gallery-opacity: #{$gallery-hover-dark-mode-with-opacity};
+  --color-bg-icon-color: #{$primary};
+  --color-text-white: #{$primary};
+  --color-text-light: #{$text-dark-mode-1};
+  --color-text-dark: #{$text-dark-mode-1};
+  --color-text-color: #{$primary};
+  --color-text-color-primary: #{$primary};
+  --color-grid: #{$grid-dark-mode};
+  --color-btn-inverse: #{$primary};
+  --color-btn-text-white: #{$gray-dark-mode-1};
+  --color-btn-white-border: #{$gray-dark-mode-1};
+  --color-icon: #{$gray-dark-mode-1};
+  --color-mobile-menu: #{$mobile-menu-dark-mode-with-opacity};
+}

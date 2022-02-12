@@ -16,6 +16,7 @@ $(document).ready(function () {
         hideImage();
         showImages(type);
     }
+
     function showImages(type) {
         $(".t-portfolio__gallery-conteiner").each(function () {
             let element = $(this);
@@ -27,6 +28,7 @@ $(document).ready(function () {
             }
         });
     }
+
     function hideImage() {
         $(".t-portfolio__gallery-conteiner").each(function () {
             let element = $(this);

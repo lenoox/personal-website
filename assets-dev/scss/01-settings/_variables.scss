@@ -1,17 +1,33 @@
 $primary: #F7DF1E;
-$secondary: #2451C7;
-$white: #ffffff;
+$secondary: #2451c7;
+$white: #FFFFFF;
 $black: #2D2D2D;
-$gray-light: #F2F2F2;
-$gray-dark: #535353;
+$grid-light-mode: lighten($secondary, 16%);
+$card-active-light-mode: darken($secondary, 5%);
+$mobile-menu-light-mode-with-opacity: rgba($secondary, .95);
+$gallery-hover-light-mode-with-opacity: rgba($secondary, .7);
+$text-light-mode-1: #535353;
+$gray-light-mode: #F2F2F2;
+
+$gray-dark-mode-1: #232328;
+$gray-dark-mode-2: #26282b;
+$gray-dark-mode-3: #2e3135;
+$grid-dark-mode: lighten($gray-dark-mode-1, 16%);
+$card-active-dark-mode: darken($gray-dark-mode-1, 5%);
+$mobile-menu-dark-mode-with-opacity: rgba($gray-dark-mode-1, .95);
+$gallery-hover-dark-mode-with-opacity: rgba($gray-dark-mode-1, .7);
+$text-dark-mode-1: #cfcece;
+
+$box-shadow-normal: 4px 4px 4px rgba(0, 0, 0, 0.4);
+$box-shadow-accessibility: 0px 0px 10px 4px darken($primary, 5);
 
 $font-size-base: 1rem;
-$font-size-1: $font-size-base * 4.5; // ~80px
-$font-size-2: $font-size-base * 3; // ~48px
-$font-size-3: $font-size-base * 2.375; // ~38px
+$font-size-1: $font-size-base * 3.25; // ~52px
+$font-size-2: $font-size-base * 2.5; // ~38px
+$font-size-3: $font-size-base * 2.125; // ~34px
 $font-size-4: $font-size-base * 1.875; // ~30px
-$font-size-5: $font-size-base * 1.625; // ~26px
-$font-size-6: $font-size-base * 1.375; // ~22px
+$font-size-5: $font-size-base * 1.5; // ~24px
+$font-size-6: $font-size-base * 1.25; // ~20px
 $font-size-7: $font-size-base * 1; // ~16px
 $font-size-8: $font-size-base * .875; // ~14px
 $font-size-9: $font-size-base * .75; // ~12px
@@ -25,9 +41,31 @@ $grid-base: 10px;
 $gutter: $grid-base * 1.5;
 
 $border-radius: $grid-base * 5;
+$link-padding: 5px;
 
 $bp-small: '576px';
 $bp-medium: '768px';
 $bp-large: '992px';
 $bp-extra-large: '1200px';
 $bp-extra-extra-large: '1400px';
+
+$z-index1: 100;
+$z-index2: 200;
+$z-index3: 300;
+$z-index4: 400;
+$z-index5: 500;
+$z-index6: 600;
+$z-index7: 700;
+$z-index8: 800;
+$z-index9: 900;
+
+$transition-fast: .3s;
+$transition-normal: .5s;
+$transition-slow: 1s;
+
+$btn-switch-padding: 5px;
+$btn-switch-control-size: 19px;
+$btn-switch-width: ($btn-switch-control-size*2.4)+($btn-switch-padding*2);
+$btn-switch-height: $btn-switch-control-size+($btn-switch-padding*2);
+
+$switch-dark-mode-control-size: 17px;

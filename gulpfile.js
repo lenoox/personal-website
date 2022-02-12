@@ -4,6 +4,8 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
+
 gulp.task('sass', function () {
     return gulp.src("assets-dev/scss/**/*.scss")
         .pipe(sass())
@@ -16,12 +18,23 @@ gulp.task('min-js', function () {
         .pipe(gulp.dest('assets/js'))
         .pipe(rename('script.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('assets/js'))
+        .pipe(gulp.dest('assets/js'));
 });
-gulp.task('serve', gulp.series('sass', 'min-js', function () {
+gulp.task('build-images', function () {
+    return gulp.src(['assets-dev/images/*.{gif,jpg,png,svg}'])
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 65, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({plugins: [{removeViewBox: false}]})
+        ]))
+        .pipe(gulp.dest('assets/images'));
+});
+gulp.task('serve', gulp.series('sass', 'min-js', 'build-images', function () {
     browserSync.init({
         server: "./"
     });
+    gulp.watch('assets-dev/images/*.{gif,jpg,png,svg}', gulp.series('build-images'));
     gulp.watch("assets-dev/scss/**/*.scss", gulp.series('sass'));
     gulp.watch("assets-dev/js/**/*.js", gulp.series('min-js'));
     gulp.watch("index.html").on('change', browserSync.reload);

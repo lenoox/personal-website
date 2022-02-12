@@ -1,12 +1,12 @@
 .t-service {
-  background: $secondary;
-  padding-top: $grid-base * 4;
-  padding-bottom: $grid-base * 4;
+  background-color: color(bg-section-color);
+  @include padding-section();
 
   &__content {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    @include padding-before-content();
     @include small-up {
       width: 100%;
       flex-direction: row;
@@ -31,7 +31,6 @@
     justify-content: center;
     flex-direction: column;
     width: 280px;
-
   }
 
   &__shape {
@@ -39,30 +38,31 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: $primary;
     width: 88px;
     height: 88px;
-    border-radius: 44px;
+    border-radius: 50%;
     margin: $grid-base;
+    background-color: color(bg-icon-color);
 
     &:hover {
       background-color: darken($primary, 10%);
     }
   }
 
-  &__icon {
+  &__icon-monitor {
     width: 70px;
     height: 70px;
-
+    color: color(icon);
   }
 
   &__icon-web {
+    color: color(icon);
     width: 54px;
     height: 54px;
   }
 
   &__name {
-    color: white;
+    color: color(text-light);
     margin: $grid-base;
     font-size: $font-size-6;
   }

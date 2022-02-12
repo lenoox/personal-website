@@ -1,5 +1,5 @@
-const hamburger = document.querySelector(".t-site-header__hamburger");
-const navMenu = document.querySelector(".c-nav");
+const hamburger = document.querySelector(".t-site-navbar__hamburger");
+const navMenu = document.querySelector(".t-site-navbar__nav");
 
 hamburger.addEventListener("click", mobileMenu);
 
@@ -8,7 +8,7 @@ function mobileMenu() {
     navMenu.classList.toggle("active");
 }
 
-const navLink = document.querySelectorAll(".c-nav__link");
+const navLink = document.querySelectorAll(".t-site-navbar__link");
 
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 
