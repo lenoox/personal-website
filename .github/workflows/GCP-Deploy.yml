@@ -48,3 +48,4 @@ jobs:
           --port 80 \
           --cpu ${{ secrets.GCP_CPU }} \
           --memory ${{ secrets.GCP_MEMORY }} \
+          --allow-unauthenticated
