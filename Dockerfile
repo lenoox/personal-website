@@ -1,9 +1,9 @@
 FROM node:16 as build
 
 
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
-COPY . .
+COPY . ./
 RUN npm run build
 
 FROM nginx:1.21.6-alpine
