@@ -1,10 +1,13 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const browserSync = require('browser-sync').create();
-const concat = require('gulp-concat');
-const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
+import gulp from 'gulp';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import browserSync from 'browser-sync';
+import concat from 'gulp-concat';
+import rename from 'gulp-rename';
+import uglify from 'gulp-uglify';
+import imagemin from 'gulp-imagemin';
+import mozjpeg from 'imagemin-mozjpeg';
+const sass = gulpSass(dartSass);
 
 gulp.task('sass', function () {
     return gulp.src("assets/scss/**/*.scss")
@@ -23,14 +26,15 @@ gulp.task('min-js', function () {
 gulp.task('build-images', function () {
     return gulp.src(['assets/images/*.{gif,jpg,png,svg}'])
         .pipe(imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 65, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
-            imagemin.svgo({plugins: [{removeViewBox: false}]})
+            //imagemin.gifsicle({interlaced: true}),
+            mozjpeg({quality: 65, progressive: true}),
+            //imagemin.optipng({optimizationLevel: 5}),
+            //imagemin.svgo({plugins: [{removeViewBox: false}]})
         ]))
         .pipe(gulp.dest('dist/images'));
 });
-gulp.task('serve', gulp.series('sass', 'min-js', 'build-images', function () {
+
+gulp.task('browser-sync', gulp.series(function () {
     browserSync.init({
         server: "./"
     });
@@ -39,7 +43,5 @@ gulp.task('serve', gulp.series('sass', 'min-js', 'build-images', function () {
     gulp.watch("assets/js/**/*.js", gulp.series('min-js'));
     gulp.watch("index.html").on('change', browserSync.reload);
 }));
-
-gulp.task('default', gulp.series('serve'));
-
-
+gulp.task('start', gulp.series('sass', 'min-js', 'build-images','browser-sync'));
+gulp.task('build', gulp.series('sass', 'min-js', 'build-images'));
