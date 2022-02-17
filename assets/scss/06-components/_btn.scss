@@ -7,7 +7,6 @@
   line-height: $line-height-base*0.9;
   padding: .60rem 0;
   text-align: center;
-  transition: all $transition-fast ease-in-out;
   width: $grid-base * 20;
   cursor: pointer;
   @include accessibility-links-and-buttons;

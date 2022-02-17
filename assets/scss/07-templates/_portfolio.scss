@@ -1,6 +1,6 @@
 .t-portfolio {
   background-color: color(bg-section-light);
-  min-height: 600px;
+
   @include padding-section();
 
   &__select {
@@ -52,7 +52,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: $transition-normal ease;
+    transition: opacity $transition-normal ease;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;

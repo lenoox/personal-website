@@ -32,11 +32,11 @@ $(document).ready(function () {
     function hideImage() {
         $(".t-portfolio__gallery-conteiner").each(function () {
             let element = $(this);
-            element.hide()
+            element.hide();
         });
     }
 
     function showImage(element) {
-        element.fadeIn();
+        element.show();
     }
 });
