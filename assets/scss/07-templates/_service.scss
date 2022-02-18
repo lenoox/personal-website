@@ -28,9 +28,9 @@
   &__element {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     width: 280px;
+    margin: $gutter 0;
   }
 
   &__shape {
@@ -63,7 +63,13 @@
 
   &__name {
     color: color(text-white);
-    margin: $grid-base;
-    font-size: $font-size-6;
+    margin-top: $grid-base;
+    @include text-5();
+    @include extra-small-up {
+      width: 85%;
+    }
+    @include medium-up{
+      width: 90%;
+    }
   }
 }

@@ -37,14 +37,7 @@
     margin-top: $grid-base;
     margin-bottom: $grid-base*2;
     @include small-screen {
-      font-size: $font-size-3;
       text-align: center;
-    }
-    @include medium-up {
-      font-size: $font-size-3;
-    }
-    @include large-up {
-      font-size: $font-size-2;
     }
   }
 
@@ -54,15 +47,12 @@
 
     &--text {
       text-align: justify;
+      @include text-5();
       @include small-screen {
-        margin-top: $grid-base * 6;
-        font-size: $font-size-6;
+        margin-top: $grid-base * 2;
       }
       @include medium-up {
-        font-size: $font-size-6;
-      }
-      @include large-up {
-        font-size: $font-size-5;
+        margin-top: $grid-base * 1;
       }
     }
 
@@ -70,15 +60,7 @@
       display: block;
       margin-bottom: $grid-base * 0.75;
       margin-top: $grid-base * 0.75;
-      @include small-screen {
-        font-size: $font-size-5;
-      }
-      @include medium-up {
-        font-size: $font-size-6;
-      }
-      @include large-up {
-        font-size: $font-size-5;
-      }
+      @include text-5();
     }
   }
 
@@ -90,12 +72,15 @@
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    @include small-screen {
-      margin-bottom: $grid-base*3;
-      width: 26vh;
-      height: 26vh;
+    @include extra-small-up {
+      margin-top: $grid-base*6;
+      margin-bottom: $grid-base;
+      width: 22vh;
+      height: 22vh;
     }
     @include medium-up {
+      margin-top: $grid-base*4;
+      margin-bottom: $grid-base*2;
       width: 28vh;
       height: 28vh;
     }
@@ -107,29 +92,39 @@
 
   &__scroll {
     display: block;
-    margin: 0 auto;
     width: 24px;
     height: 60px;
     opacity: 0.8;
     position: absolute;
+    margin: 0 auto;
     bottom: 0;
     left: 0;
     right: 0;
+    @include extra-small-up {
+      bottom: -10px;
+    }
+    @include medium-up {
+      bottom: 0px;
+    }
   }
 
   &__arrow {
     display: block;
-    width: 5px;
-    height: 5px;
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     border-right: 2px solid white;
     border-bottom: 2px solid white;
-    margin: 0 0 3px 4px;
-    width: 16px;
-    height: 16px;
+    margin: 5px;
 
+    @include extra-small-up {
+      width: $grid-base*1.2;
+      height: $grid-base*1.2;
+    }
+    @include medium-up {
+      width: 16px;
+      height: 16px;
+    }
     &--first {
       margin-top: 1px;
     }

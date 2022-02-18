@@ -1,3 +1,63 @@
+@mixin text-5 {
+  @include extra-small-up {
+    font-size: $font-size-7;
+  }
+  @include small-up {
+    font-size: $font-size-6;
+  }
+  @include medium-up {
+    font-size: $font-size-5;
+  }
+  @include large-up {
+    font-size: $font-size-5;
+  }
+  @include extra-large-up {
+    font-size: $font-size-5;
+  }
+  @include extra-extra-large-up {
+    font-size: $font-size-5;
+  }
+}
+@mixin text-6 {
+  @include extra-small-up {
+    font-size: $font-size-7;
+  }
+  @include small-up {
+    font-size: $font-size-7;
+  }
+  @include medium-up {
+    font-size: $font-size-6;
+  }
+  @include large-up {
+    font-size: $font-size-6;
+  }
+  @include extra-large-up {
+    font-size: $font-size-6;
+  }
+  @include extra-extra-large-up {
+    font-size: $font-size-6;
+  }
+}
+@mixin text-7 {
+  @include extra-small-up {
+    font-size: $font-size-8;
+  }
+  @include small-up {
+    font-size: $font-size-8;
+  }
+  @include medium-up {
+    font-size: $font-size-7;
+  }
+  @include large-up {
+    font-size: $font-size-7;
+  }
+  @include extra-large-up {
+    font-size: $font-size-7;
+  }
+  @include extra-extra-large-up{
+    font-size: $font-size-7;
+  }
+}
 @mixin accessibility-links-and-buttons {
   &:focus-visible {
     outline: 3px #D90C0C dashed;
@@ -5,8 +65,14 @@
 }
 
 @mixin padding-section {
-  padding-top: $grid-base * 5;
-  padding-bottom: $grid-base * 5;
+  @include extra-small-up {
+    padding-top: $grid-base *4;
+    padding-bottom: $grid-base * 4;
+  }
+  @include small-up {
+    padding-top: $grid-base * 5;
+    padding-bottom: $grid-base * 5;
+  }
 }
 
 @mixin padding-before-content {
@@ -14,7 +80,7 @@
 }
 
 @mixin small-screen {
-  @media only screen and (max-width: #{$bp-large}) {
+  @media only screen and (min-width: 0) and (max-width: #{$bp-large}) {
     @content
   }
 }

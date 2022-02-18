@@ -1,9 +1,11 @@
 .o-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -$gutter;
-  margin-right: -$gutter;
 
+  @include medium-up {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+  }
   &--center-y {
     align-items: center;
   }

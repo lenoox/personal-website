@@ -16,7 +16,16 @@
     padding: 34px 130px;
     margin-bottom: $grid-base;
     margin-top: $grid-base;
-
+    @include text-5();
+    @include  extra-small-up {
+      padding: 14px 75px;
+    }
+    @include  small-up {
+      padding: 16px 80px;
+    }
+    @include medium-up {
+      padding: 34px 130px;
+    }
     &:hover {
       background: color(bg-card-active);
     }
@@ -40,7 +49,12 @@
 
   &__name {
     color: $white;
-    margin-top: $grid-base;
-    font-size: $font-size-6;
+    @include text-5();
+    @include  extra-small-up {
+      margin-top: $grid-base*0.2;
+    }
+    @include  small-up {
+      margin-top: $grid-base;
+    }
   }
 }

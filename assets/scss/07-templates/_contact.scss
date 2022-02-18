@@ -6,9 +6,10 @@
     display: flex;
     justify-content: center;
     @include padding-before-content();
-    @include small-up {
+    @include small-screen {
       width: 100%;
-      flex-direction: row;
+      flex-direction: column;
+      border: #D90C0C;
     }
     @include medium-up {
       width: 80%;
@@ -27,10 +28,16 @@
 
   &__element {
     display: flex;
-    justify-content: center;
     flex-direction: row;
     align-items: center;
 
+    @include small-screen {
+      margin-top: 10px;
+      justify-content: left;
+    }
+    @include medium-up {
+      justify-content: center;
+    }
     p {
       margin-left: $grid-base * 1.4;
     }
@@ -39,28 +46,61 @@
   &__icon {
     border: 2px solid $white;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    @include  extra-small-up {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $white;
+    }
+    @include  small-up {
+      width: 50px;
+      height: 50px;
+    }
+    @include medium-up {
+      width: 60px;
+      height: 60px;
+      border: 2px solid $white;
+    }
     &--linkedin {
-      width: 30px;
-      height: 30px;
+
+      @include  extra-small-up {
+        width: 20px;
+        height: 20px;
+      }
+      @include  small-up {
+        width: 25px;
+        height: 25px;
+      }
+      @include medium-up {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &--github {
-      width: 38px;
-      height: 36px;
+
+      @include  extra-small-up {
+        width: 19px;
+        height: 18px
+      }
+      @include  small-up {
+        width: 32px;
+        height: 30px
+      }
+      @include medium-up {
+        width: 38px;
+        height: 36px;
+      }
     }
   }
 
   &__link {
     color: $white;
-    font-weight: bold;
-
+    @include text-5();
     &:hover {
       color: $primary;
     }

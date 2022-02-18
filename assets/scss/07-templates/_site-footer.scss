@@ -3,4 +3,7 @@
   padding-bottom: $grid-base * 2;
   background-color: color(bg-section-light);
   color: color(text-dark);
+  &__text{
+    @include text-7();
+  }
 }
