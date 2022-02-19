@@ -3,10 +3,10 @@
   margin-right: auto;
   padding-left: $gutter;
   padding-right: $gutter;
-  @include extra-small-up{
+  @include extra-small-up {
     width: 95%;
   }
-  @include small-up{
+  @include small-up {
     width: 90%;
   }
   @include medium-up {

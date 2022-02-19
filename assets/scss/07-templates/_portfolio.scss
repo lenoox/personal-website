@@ -40,6 +40,7 @@
       width: 100%;
       height: 100%;
     }
+
     &:hover {
       .t-portfolio__description {
         visibility: visible;
@@ -69,50 +70,46 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     h3 {
       position: relative;
 
       &:after {
         content: '';
         position: absolute;
-        height: 2px;
+        height: $grid-base*0.2;
         margin: 0 auto;
         left: -10%;
         right: 0;
         width: 120%;
         background: white;
         @include extra-small-up {
-          bottom: -6px;
-        }
-        @include small-up {
-          padding-top: -10px;
-        }
-        @include medium-up {
-          padding-top: -8px;
-        }
-        @include large-up {
-          padding-top: -8px;
+          bottom: -$grid-base;
         }
       }
     }
 
     p {
-      @include text-6();
       @include extra-small-up {
+        @include text-7();
         line-height: 100%;
-        padding-top: $grid-base*0.9;
-        width: 96%;
+        margin-top: ($grid-base*0.6)+$portfolio-margin;
+        width: 98%;
       }
       @include small-up {
-        padding-top: 20px;
+        @include text-6();
+        margin-top: ($grid-base*1.2)+$portfolio-margin;
         width: 80%;
       }
       @include medium-up {
-        padding-top: 18px;
+        margin-top: ($grid-base*2.5)+$portfolio-margin;
       }
       @include large-up {
-        line-height: 120%;
-        padding-top: 18px;
+        line-height: 110%;
+        margin-top: ($grid-base*1.7)+$portfolio-margin;
+      }
+      @include extra-large-up {
+        margin-top: ($grid-base*2)+$portfolio-margin;
       }
     }
   }
@@ -121,9 +118,26 @@
     color: color(text-white);
     font-weight: bold;
     text-decoration: underline;
-    margin-top: $grid-base;
-    @include text-6();
-    &:hover{
+    @include extra-small-up {
+      @include text-7();
+      margin-top: ($grid-base*0.6);
+    }
+    @include small-up {
+      margin-top: ($grid-base*1.2);
+      @include text-6();
+    }
+    @include medium-up {
+      margin-top: ($grid-base*2.5);
+
+    }
+    @include large-up {
+      margin-top: ($grid-base*1.7);
+    }
+    @include extra-large-up {
+      margin-top: ($grid-base*2);
+    }
+
+    &:hover {
       color: $primary
     }
   }

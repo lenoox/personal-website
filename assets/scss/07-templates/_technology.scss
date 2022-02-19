@@ -4,6 +4,24 @@
 
   &__content {
     @include padding-before-content();
+    @include extra-small-up {
+      width: 100%;
+    }
+    @include small-up {
+      width: 100%;
+    }
+    @include medium-up {
+      width: 100%;
+    }
+    @include large-up {
+      width: 90%;
+    }
+    @include extra-large-up {
+      width: 100%;
+    }
+    @include extra-extra-large-up {
+      width: 90%;
+    }
   }
 
   &__element {
@@ -13,19 +31,28 @@
     flex-direction: column;
     background: color(bg-card);
     box-shadow: $box-shadow-normal;
-    padding: 34px 130px;
     margin-bottom: $grid-base;
     margin-top: $grid-base;
     @include text-5();
-    @include  extra-small-up {
-      padding: 14px 75px;
+    @include extra-small-up {
+      padding: 15px 60px;
     }
-    @include  small-up {
-      padding: 16px 80px;
+    @include small-up {
+      padding: 25px 90px;
     }
     @include medium-up {
-      padding: 34px 130px;
+      padding: 25px 0px;
     }
+    @include large-up {
+      padding: 30px 0px;
+    }
+    @include extra-large-up {
+      padding: 25px 0px;
+    }
+    @include extra-extra-large-up {
+      padding: 30px 0px;
+    }
+
     &:hover {
       background: color(bg-card-active);
     }
@@ -50,10 +77,10 @@
   &__name {
     color: $white;
     @include text-5();
-    @include  extra-small-up {
+    @include extra-small-up {
       margin-top: $grid-base*0.2;
     }
-    @include  small-up {
+    @include small-up {
       margin-top: $grid-base;
     }
   }

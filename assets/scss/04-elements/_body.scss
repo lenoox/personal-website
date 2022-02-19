@@ -6,10 +6,15 @@ html {
 
 body {
   background: color(bg-section-light);
-  width:100%;
+  width: 100%;
+  --transition: 0s;
 }
 
-body[light-mode="light"] {
+* {
+  transition: color var(--transition) ease, background-color var(--transition) ease;
+}
+
+body[theme="light"] {
   --color-bg-navbar: #{$secondary};
   --color-bg-header: #{$secondary};
   --color-bg-section-color: #{$secondary};
@@ -31,9 +36,10 @@ body[light-mode="light"] {
   --color-btn-white-border: #{$secondary};
   --color-icon: #{$secondary};
   --color-mobile-menu: #{$mobile-menu-light-mode-with-opacity};
+
 }
 
-body[light-mode="dark"] {
+body[theme="dark"] {
   --color-bg-navbar: #{$gray-dark-mode-1};
   --color-bg-header: #{$gray-dark-mode-1};
   --color-bg-section-color: #{$gray-dark-mode-1};
@@ -55,7 +61,5 @@ body[light-mode="dark"] {
   --color-btn-white-border: #{$gray-dark-mode-1};
   --color-icon: #{$gray-dark-mode-1};
   --color-mobile-menu: #{$mobile-menu-dark-mode-with-opacity};
-}
-#scrollbar{
-  overflow: auto;
+
 }

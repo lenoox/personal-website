@@ -2,21 +2,49 @@
   background: color(bg-section-light);
   @include padding-section();
 
-  &__grid-skill {
-    transform-origin: right;
+  &__descritpion {
     @include extra-small-up {
-      transform: scale(0.9);
-      transform-origin: center;
+      @include padding-section();
+      width: 100%;
+    }
+    @include small-up {
+      width: 80%;
+      @include padding-section();
     }
     @include medium-up {
-      transform: scale(1);
-      transform-origin: center;
+      @include padding-section();
+      width: 80%;
     }
     @include large-up {
-      transform: scale(1.1);
+      width: 100%;
+      padding: 0 30px;
     }
     @include extra-large-up {
-      transform: scale(0.8);
+      width: 90%;
+      padding: 0 30px;
+    }
+  }
+
+  &__grid-skill {
+    @include extra-small-up {
+      width: 100%;
+      padding: 0;
+    }
+    @include small-up {
+      width: 80%;
+      padding: 0;
+    }
+    @include medium-up {
+      width: 80%;
+      padding: 0 30px;
+    }
+    @include large-up {
+      width: 100%;
+      padding: 0 30px;
+    }
+    @include extra-large-up {
+      width: 90%;
+      padding: 0 30px;
     }
   }
 
@@ -37,6 +65,10 @@
     &--left {
       width: 90%;
       height: 100%;
+      @include extra-small-up {
+        width: 92%;
+        height: 100%;
+      }
     }
 
     &--right {
@@ -47,18 +79,30 @@
         height: 50%;
         &:nth-child(1) {
           margin-bottom: 5%;
+          @include extra-small-up {
+            margin-bottom: 4%;
+          }
         }
         &:nth-child(2) {
           margin-top: 5%;
+          @include extra-small-up {
+            margin-top: 4%;
+          }
         }
       }
 
       &:nth-child(1) {
         margin-bottom: 5%;
+        @include extra-small-up {
+          margin-bottom: 4%;
+        }
       }
 
       &:nth-child(2) {
         margin-top: 5%;
+        @include extra-small-up {
+          margin-top: 4%;
+        }
       }
     }
   }
@@ -79,19 +123,20 @@
     flex-direction: column;
     justify-content: center;
     color: color(text-white);
-    @include text-5();
+    @include text-6();
     @include small-screen {
-      padding: 2px;
+      padding: 3px;
     }
     @include medium-up {
-      padding: 15px;
+      padding: 4px;
+    }
+
+    @include large-up {
+      padding: 8px;
     }
 
   }
 
-  &__descritpion {
-    padding: 4%;
-  }
 
   &__text {
     @include padding-before-content();

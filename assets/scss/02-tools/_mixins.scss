@@ -18,6 +18,7 @@
     font-size: $font-size-5;
   }
 }
+
 @mixin text-6 {
   @include extra-small-up {
     font-size: $font-size-7;
@@ -38,9 +39,10 @@
     font-size: $font-size-6;
   }
 }
+
 @mixin text-7 {
   @include extra-small-up {
-    font-size: $font-size-8;
+    font-size: $font-size-9;
   }
   @include small-up {
     font-size: $font-size-8;
@@ -54,10 +56,11 @@
   @include extra-large-up {
     font-size: $font-size-7;
   }
-  @include extra-extra-large-up{
+  @include extra-extra-large-up {
     font-size: $font-size-7;
   }
 }
+
 @mixin accessibility-links-and-buttons {
   &:focus-visible {
     outline: 3px #D90C0C dashed;

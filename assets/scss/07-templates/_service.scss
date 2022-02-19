@@ -41,7 +41,7 @@
     width: 88px;
     height: 88px;
     border-radius: 50%;
-    margin: $grid-base;
+    margin-bottom: $grid-base;
     background-color: color(bg-icon-color);
 
     &:hover {
@@ -68,7 +68,7 @@
     @include extra-small-up {
       width: 85%;
     }
-    @include medium-up{
+    @include medium-up {
       width: 90%;
     }
   }

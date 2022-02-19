@@ -72,7 +72,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                { from: "assets/images", to: "assets/images" },
+                {from: "assets/images", to: "assets/images"},
             ],
         }),
         new ImageminPlugin({

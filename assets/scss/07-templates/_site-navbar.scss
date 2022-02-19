@@ -24,7 +24,7 @@
   }
 
   &__logo {
-
+    z-index: $z-index6;
     @include extra-small-up {
       height: 34px;
     }
@@ -32,6 +32,7 @@
       height: 40px;
     }
   }
+
   &__item {
     color: $white;
     display: block;
@@ -71,10 +72,10 @@
   &__nav {
     @include small-screen {
       & {
-        z-index: $z-index7;
+        z-index: $z-index5;
         padding: ($grid-base*2) $grid-base;
         position: fixed;
-        top: -100%;
+        top: -300px;
         left: 0;
         flex-direction: column;
         background-color: color(mobile-menu);
@@ -91,10 +92,11 @@
 
   &__navbar-icon {
     margin: 0;
+    z-index: $z-index6;
   }
+
   &__hamburger {
     display: none;
-    z-index: $z-index8;
     margin: 0 5px;
     @include small-screen {
       & {
@@ -185,21 +187,21 @@
     left: 10px;
   }
 
-  body[light-mode="dark"] &__change-mode-btn &__bg-change-mode-btn {
+  body[theme="dark"] &__change-mode-btn &__bg-change-mode-btn {
     background-color: #5d5d5d;
     color: #141516;
   }
 
-  body[light-mode=dark] &__change-mode-btn &__control-change-mode-btn {
+  body[theme=dark] &__change-mode-btn &__control-change-mode-btn {
     left: (($btn-switch-control-size*1.4)+$btn-switch-padding);
     background-color: $primary;
   }
 
-  body[light-mode=dark] &__change-mode-btn &__bg-change-mode-btn &__light-mode {
+  body[theme=dark] &__change-mode-btn &__bg-change-mode-btn &__light-mode {
     display: none;
   }
 
-  body[light-mode=dark] &__change-mode-btn &__bg-change-mode-btn &__dark-mode {
+  body[theme=dark] &__change-mode-btn &__bg-change-mode-btn &__dark-mode {
     display: block;
   }
 

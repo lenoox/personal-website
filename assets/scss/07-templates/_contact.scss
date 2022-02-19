@@ -5,14 +5,12 @@
   &__content {
     display: flex;
     justify-content: center;
+    align-items: center;
     @include padding-before-content();
-    @include small-screen {
-      width: 100%;
+    @include extra-small-up {
       flex-direction: column;
-      border: #D90C0C;
     }
     @include medium-up {
-      width: 80%;
       flex-direction: row;
     }
     @include large-up {
@@ -22,7 +20,7 @@
       width: 65%;
     }
     @include extra-extra-large-up {
-      width: 50%;
+      width: 80%;
     }
   }
 
@@ -30,16 +28,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 
-    @include small-screen {
-      margin-top: 10px;
-      justify-content: left;
+    @include extra-small-up {
+      margin-top: $grid-base*1.5;
+      flex-direction: column;
     }
     @include medium-up {
-      justify-content: center;
+      flex-direction: row;
+
     }
+
     p {
-      margin-left: $grid-base * 1.4;
+      margin: 12px 15px;
     }
   }
 
@@ -51,12 +52,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    @include  extra-small-up {
+    @include extra-small-up {
       width: 40px;
       height: 40px;
       border: 1px solid $white;
     }
-    @include  small-up {
+    @include small-up {
       width: 50px;
       height: 50px;
     }
@@ -65,13 +66,13 @@
       height: 60px;
       border: 2px solid $white;
     }
-    &--linkedin {
 
-      @include  extra-small-up {
+    &--linkedin {
+      @include extra-small-up {
         width: 20px;
         height: 20px;
       }
-      @include  small-up {
+      @include small-up {
         width: 25px;
         height: 25px;
       }
@@ -82,12 +83,11 @@
     }
 
     &--github {
-
-      @include  extra-small-up {
+      @include extra-small-up {
         width: 19px;
         height: 18px
       }
-      @include  small-up {
+      @include small-up {
         width: 32px;
         height: 30px
       }
@@ -101,6 +101,7 @@
   &__link {
     color: $white;
     @include text-5();
+
     &:hover {
       color: $primary;
     }

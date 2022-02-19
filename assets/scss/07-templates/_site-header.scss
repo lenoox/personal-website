@@ -74,13 +74,13 @@
     margin-right: auto;
     @include extra-small-up {
       margin-top: $grid-base*6;
-      margin-bottom: $grid-base;
+      margin-bottom: $grid-base*3;
       width: 22vh;
       height: 22vh;
     }
     @include medium-up {
       margin-top: $grid-base*4;
-      margin-bottom: $grid-base*2;
+      margin-bottom: $grid-base*3;
       width: 28vh;
       height: 28vh;
     }
@@ -125,6 +125,7 @@
       width: 16px;
       height: 16px;
     }
+
     &--first {
       margin-top: 1px;
     }

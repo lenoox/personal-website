@@ -10,11 +10,11 @@
     <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body class="light-theme">
+<body class="light-theme preload">
 <script>
     $(document).ready(function () {
         const stateMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
-        $(document.body).attr("light-mode", stateMode);
+        $(document.body).attr("theme", stateMode);
         $('#nowYear').html(new Date().getFullYear());
     });
 </script>
@@ -122,39 +122,47 @@
 <main>
     <section id="about-me" class="t-about-me">
         <div class="o-container">
-            <div class="o-row o-row--center-y">
+            <div class="o-row o-row--center-y o-row--center-x">
                 <div class="o-col o-col--lg50">
-                    <div class="t-about-me__grid-skill o-row o-row--no-wrap">
-                        <div class="o-row o-row--no-wrap o-col o-col--sm50 u-mx-0 u-px-0">
-                            <div class="t-about-me__item t-about-me__item--left">
-                                <img src="assets/images/development.jpg"
-                                     class="t-about-me__skills"
-                                     alt="Fotografia stanowiska programisty">
-                                <p class="t-about-me__img-title u-text-center">Programista</p>
+                    <div class="o-row o-row--center-y o-row--center-x">
+                        <div class="t-about-me__grid-skill o-row o-row--no-wrap">
+                            <div class="o-row o-row--no-wrap o-col o-col--sm50 u-mx-0 u-px-0">
+                                <div class="t-about-me__item t-about-me__item--left">
+                                    <img src="assets/images/development.jpg"
+                                         class="t-about-me__skills"
+                                         alt="Fotografia stanowiska programisty">
+                                    <p class="t-about-me__img-title u-text-center">Programista</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="o-row o-row--column o-row--no-wrap o-col o-col--sm50 u-mx-0 u-px-0">
-                            <div class="t-about-me__item t-about-me__item--right">
-                                <img src="assets/images/pair-programming.jpg"
-                                     class="t-about-me__skills"
-                                     alt="Fotografia wspólnego programowania">
-                                <p class="t-about-me__img-title u-text-center">Wspólne programowanie</p>
-                            </div>
-                            <div class="t-about-me__item t-about-me__item--right">
-                                <img src="assets/images/team-work.jpg"
-                                     class="t-about-me__skills"
-                                     alt="Fotografia pracy zespołowej">
-                                <p class="t-about-me__img-title u-text-center">Praca zespołowa</p>
+                            <div class="o-row o-row--column o-row--no-wrap o-col o-col--sm50 u-mx-0 u-px-0">
+                                <div class="t-about-me__item t-about-me__item--right">
+                                    <img src="assets/images/pair-programming.jpg"
+                                         class="t-about-me__skills"
+                                         alt="Fotografia wspólnego programowania">
+                                    <p class="t-about-me__img-title u-text-center">Wspólne programowanie</p>
+                                </div>
+                                <div class="t-about-me__item t-about-me__item--right">
+                                    <img src="assets/images/team-work.jpg"
+                                         class="t-about-me__skills"
+                                         alt="Fotografia pracy zespołowej">
+                                    <p class="t-about-me__img-title u-text-center">Praca zespołowa</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="t-about-me__descritpion o-col o-col--lg50">
-                    <h2 class="c-heading c-heading--level2 c-heading--secondary">O mnie</h2>
-                    <p class="t-about-me__text">Jestem programistą, który chce się rozwijać głównie w&nbsp;dziedzinie
-                        front-end. Niedawno zacząłem przygodę ze światem książek. Z czasem chciałbym poświęcać na nie
-                        więcej czasu :). Jestem osobą, która jest ciekawa wiedzy - nie tylko w obszarze front-end’u ale
-                        też w&nbsp;innych dziedzinach.</p>
+                <div class="o-col o-col--lg50">
+                    <div class="o-row o-row--center-y o-row--center-x">
+                        <div class="t-about-me__descritpion">
+                            <h2 class="c-heading c-heading--level2 c-heading--secondary">O mnie</h2>
+                            <p class="t-about-me__text">Jestem programistą, który chce się rozwijać głównie w&nbsp;dziedzinie
+                                front-end. Niedawno zacząłem przygodę ze światem książek. Z czasem chciałbym poświęcać
+                                na nie
+                                więcej czasu :). Jestem osobą, która jest ciekawa wiedzy - nie tylko w obszarze
+                                front-end’u ale
+                                też w&nbsp;innych dziedzinach.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,35 +201,37 @@
             <div class="o-row o-row--center-x">
                 <h2 class="c-heading c-heading--level2 c-heading--secondary">Technologie</h2>
             </div>
-            <div class="t-technology__content o-row o-row--center-x o-row--column-rwd">
-                <div class="o-col">
-                    <div class="t-technology__element">
-                        <div class="t-technology__logo">
-                            <img src="assets/images/js.jpg"
-                                 class="t-technology__logo"
-                                 alt="Ikona języka JavaScript, którego wykorzystuję w projektach.">
+            <div class="o-row o-row--center-x o-row--center-y">
+                <div class="t-technology__content o-row o-row--center-x o-row--center-y o-row--column-rwd">
+                    <div class="o-col o-col--sm100 o-col--md50 o-col--lg50 o-col--xl33 o-col--xxl33">
+                        <div class="t-technology__element">
+                            <div class="t-technology__logo">
+                                <img src="assets/images/js.jpg"
+                                     class="t-technology__logo"
+                                     alt="Ikona języka JavaScript, którego wykorzystuję w projektach.">
+                            </div>
+                            <p class="t-technology__name u-text-center">JavaScript</p>
                         </div>
-                        <p class="t-technology__name u-text-center">JavaScript</p>
                     </div>
-                </div>
-                <div class="o-col">
-                    <div class="t-technology__element">
-                        <div class="t-technology__logo">
-                            <img src="assets/images/angular.jpg"
-                                 class="t-technology__logo"
-                                 alt="Ikona technologii Angular, którą wykorzystuję w projektach.">
+                    <div class="o-col o-col--sm100 o-col--md50 o-col--lg50 o-col--xl33 o-col--xxl33">
+                        <div class="t-technology__element">
+                            <div class="t-technology__logo">
+                                <img src="assets/images/angular.jpg"
+                                     class="t-technology__logo"
+                                     alt="Ikona technologii Angular, którą wykorzystuję w projektach.">
+                            </div>
+                            <p class="t-technology__name u-text-center">Angular</p>
                         </div>
-                        <p class="t-technology__name u-text-center">Angular</p>
                     </div>
-                </div>
-                <div class="o-col">
-                    <div class="t-technology__element">
-                        <div class="t-technology__logo">
-                            <img src="assets/images/java.jpg"
-                                 class="t-technology__logo t-technology__logo--java"
-                                 alt="Ikona języka Java, którego wykorzystuję w projektach.">
+                    <div class="o-col o-col--sm100 o-col--md50 o-col--lg50 o-col--xl33 o-col--xxl33">
+                        <div class="t-technology__element">
+                            <div class="t-technology__logo">
+                                <img src="assets/images/java.jpg"
+                                     class="t-technology__logo t-technology__logo--java"
+                                     alt="Ikona języka Java, którego wykorzystuję w projektach.">
+                            </div>
+                            <p class="t-technology__name u-text-center">Java</p>
                         </div>
-                        <p class="t-technology__name u-text-center">Java</p>
                     </div>
                 </div>
             </div>
@@ -247,9 +257,8 @@
                              class="t-portfolio__image"
                              alt="Zdjęcie mojego projektu sklepu internetowego stworzonego w oparciu o technologie Angular i Spring.">
                         <div class="t-portfolio__description">
-                            <h3 class="c-heading c-heading--level2 c-heading--primary">ProMusic</h3>
-                            <p class="u-white u-text-center">TypeScript, Angular, Bootstrap, Java, Spring, PostgreSQL,
-                                FlywayDB</p>
+                            <h3 class="c-heading c-heading--level3 c-heading--primary">ProMusic</h3>
+                            <p class="u-white u-text-center">Angular, Bootstrap, Spring, PostgreSQL, FlywayDB</p>
                             <a href="" class="t-portfolio__link"
                                target="_blank"
                                rel="noopener noreferrer" alt="Link do  projektu ProMusic">Zobacz projekt</a>
@@ -262,7 +271,7 @@
                              class="t-portfolio__image"
                              alt="Zdjęcie stworzonej strony internetowej dla klienta z branży filmowej.">
                         <div class="t-portfolio__description">
-                            <h3 class="c-heading c-heading--level2 c-heading--primary">MFILM</h3>
+                            <h3 class="c-heading c-heading--level3 c-heading--primary">MFILM</h3>
                             <p class="u-white u-text-center">HTML, CSS, JavaScript, framework PHP.</p>
                         </div>
                     </div>
@@ -279,24 +288,29 @@
                 <div class="t-contact__content">
                     <div class="t-contact__element o-col">
                         <div class="t-contact__icon">
-                        <span class="iconify t-contact__icon--linkedin" aria-hidden="true"
-                              data-icon="fontisto:linkedin"></span>
+                                <span class="iconify t-contact__icon--linkedin " aria-hidden="true"
+                                      data-icon="fontisto:linkedin">
+                                </span>
+
                         </div>
                         <p class="t-contact__alias">
-                            <a href="https://www.linkedin.com/in/adamgorecki128/" class="t-contact__link"
+                            <a href="https://www.linkedin.com/in/adamgorecki128/" class="t-contact__link u-text-center"
                                target="_blank"
                                rel="noopener noreferrer" alt="Link do profilu na portalu LinkedIn">@adamgorecki128</a>
                         </p>
                     </div>
+
                     <div class="t-contact__element o-col">
                         <div class="t-contact__icon">
-                        <span class="iconify t-contact__icon--github" aria-hidden="true"
-                              data-icon="iconoir:github"></span>
+                            <span class="iconify t-contact__icon--github" aria-hidden="true"
+                                  data-icon="iconoir:github">
+                            </span>
                         </div>
                         <p class="t-contact__alias">
-                            <a href="https://github.com/lenoox" class="t-contact__link" target="_blank"
+                            <a href="https://github.com/lenoox" class="t-contact__link u-text-center" target="_blank"
                                rel="noopener noreferrer" alt="Link do profilu na portalu github">@lenoox</a>
                         </p>
+
                     </div>
                 </div>
             </div>

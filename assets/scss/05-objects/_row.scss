@@ -6,6 +6,7 @@
     margin-left: -$gutter;
     margin-right: -$gutter;
   }
+
   &--center-y {
     align-items: center;
   }
@@ -28,6 +29,9 @@
   }
 
   &--column-rwd {
+    @include extra-small-up {
+      flex-direction: column;
+    }
     @include medium-up {
       flex-direction: row;
     }

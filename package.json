@@ -33,7 +33,5 @@
     "webpack-cli": "^4.3.0",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {
-    "smooth-scrollbar": "^8.7.4"
-  }
+  "dependencies": {}
 }
