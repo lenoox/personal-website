@@ -30,15 +30,14 @@
     background-color: rgba(0, 0, 0, 0.0);
     color: color(btn-inverse);
     border: 1px solid color(btn-inverse);
-    padding: .3rem 0;
-    line-height: $line-height-base*0.8;
-    width: $grid-base * 14;
+    padding: 0.3rem 0;
+    line-height: $line-height-base;
+    width: $grid-base * 19;
     margin-left: $grid-base*1.5;
     margin-right: $grid-base*1.5;
     @include text-6();
     @include small-screen {
-      width: $grid-base * 17;
-      line-height: $line-height-base*0.8;
+      width: $grid-base * 18;
       margin-top: $grid-base;
     }
 
