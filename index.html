@@ -21,7 +21,11 @@
 <nav id="nav" class="t-site-navbar">
     <div class="o-container">
         <div class="o-row o-row--center-y o-row--space-between">
-            <img src="assets/images/ag-logo.png" class="t-site-navbar__logo" alt="Logotyp strony Adam Góreckiego">
+            <h1>
+                <a href="/">
+                    <img src="assets/images/ag-logo.png" class="t-site-navbar__logo" alt="Strona Adam Góreckiego">
+                </a>
+            </h1>
             <div class="o-row o-row--center-y">
                 <div class="o-row o-row--center-y t-site-navbar__navbar-icon">
                     <button
@@ -95,8 +99,8 @@
                 <div class="t-site-header__hero">
                     <div class="o-row o-row--center-y o-row--column-reverse">
                         <div class="o-col o-col--lg50">
-                            <h1 class="c-heading c-heading--level1 c-heading--primary">Adam Górecki</h1>
-                            <h2 class="c-heading c-heading--level2 t-site-header__position-text">Developer</h2>
+                            <h2 class="c-heading c-heading--level1 c-heading--primary">Adam Górecki</h2>
+                            <h3 class="c-heading c-heading--level2 t-site-header__position-text">Developer</h3>
                             <div class="t-site-header__quote">
                                 <p class="t-site-header__quote--text">“In order to be knowledgeable in these changing
                                     times, we must pursue a&nbsp;constant program of self-improvement, a&nbsp;never-ending
@@ -246,10 +250,10 @@
             </div>
             <div class="o-row o-row--center-x">
                 <div id="portfolioSelect" class="t-portfolio__select">
-                    <button class="c-btn c-btn__inverse c-btn__inverse--active filterSelection" select="all">Wszystkie
+                    <button class="c-btn c-btn__inverse c-btn__inverse--active filterSelection" data-select="all">Wszystkie
                     </button>
-                    <button class="c-btn c-btn__inverse filterSelection" select="personal">Własne</button>
-                    <button class="c-btn c-btn__inverse filterSelection" select="client">Dla Klientów</button>
+                    <button class="c-btn c-btn__inverse filterSelection" data-select="personal">Własne</button>
+                    <button class="c-btn c-btn__inverse filterSelection" data-select="client">Dla Klientów</button>
                 </div>
             </div>
             <div class="t-portfolio__content o-row o-row--center-x o-row--column-rwd">
@@ -263,7 +267,7 @@
                             <p class="u-white u-text-center">Angular, Bootstrap, Spring, PostgreSQL, FlywayDB</p>
                             <a href="https://promusic.ovh" class="t-portfolio__link"
                                target="_blank"
-                               rel="noopener noreferrer" alt="Link do projektu ProMusic">Zobacz projekt</a>
+                               rel="noopener noreferrer" title="Link do projektu ProMusic">Zobacz projekt</a>
                         </div>
                     </div>
                 </div>
@@ -277,7 +281,7 @@
                             <p class="u-white u-text-center">HTML, CSS, JavaScript, framework PHP.</p>
                             <a href="http://www.mfilm.pl" class="t-portfolio__link"
                                target="_blank"
-                               rel="noopener noreferrer" alt="Link do projektu MFILM">Zobacz projekt</a>
+                               rel="noopener noreferrer" title="Link do projektu MFILM">Zobacz projekt</a>
                         </div>
                     </div>
                 </div>
@@ -301,7 +305,7 @@
                         <p class="t-contact__alias">
                             <a href="https://www.linkedin.com/in/adamgorecki128/" class="t-contact__link u-text-center"
                                target="_blank"
-                               rel="noopener noreferrer" alt="Link do profilu na portalu LinkedIn">@adamgorecki128</a>
+                               rel="noopener noreferrer" title="Link do profilu na portalu LinkedIn">@adamgorecki128</a>
                         </p>
                     </div>
 
@@ -313,7 +317,7 @@
                         </div>
                         <p class="t-contact__alias">
                             <a href="https://github.com/lenoox" class="t-contact__link u-text-center" target="_blank"
-                               rel="noopener noreferrer" alt="Link do profilu na portalu github">@lenoox</a>
+                               rel="noopener noreferrer" title="Link do profilu na portalu github">@lenoox</a>
                         </p>
 
                     </div>

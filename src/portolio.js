@@ -1,7 +1,7 @@
 $(document).ready(function () {
     filterSelection("all");
     $('.filterSelection').on('click', function () {
-        let c = $(this).attr('select');
+        let c = $(this).attr('data-select');
         filterSelection(c);
     });
 
